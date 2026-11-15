@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tournois | PokéDex TCG</title>
+    <link rel="icon" href="img/pokeball.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/deck.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="conteneur barre">
+            <a class="logo" href="index.html"><img src="img/pokeball.png" width="32" height="32" alt="">PokéDex TCG</a>
+            <nav aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="cartes.html">Cartes</a>
+                <a href="tournois.html" aria-current="page">Tournois</a>
+                <a href="apropos.html">À propos</a>
+            </nav>
+        </div>
+    </header>
+    <main class="conteneur">
+        <section class="introduction">
+            <h1>Tournois et résultats</h1>
+            <p>Six tournois fictifs tirés de la base de données PokéDex TCG.</p>
+        </section>
+        <section class="panneau guide-carte">
+            <h2>À quoi ressemble un tournoi ?</h2>
+            <p>En tournoi, les joueurs sont associés à des adversaires à chaque ronde. Le tableau ci-dessous présente les événements de notre simulation. Clique sur un tournoi pour voir ses matchs, les pseudos des deux joueurs et le résultat.</p>
+            <p>Dans un tournoi en rondes suisses, tu peux continuer à jouer après une défaite. Les résultats des premières rondes aident à déterminer tes prochains adversaires.</p>
+        </section>
+        <div class="tableau" tabindex="0" role="region" aria-label="Liste des tournois">
+            <table>
+                <caption>Calendrier des tournois du projet</caption>
+                <thead><tr><th scope="col">Tournoi</th><th scope="col">Lieu</th><th scope="col">Dates</th></tr></thead>
+                <tbody>
+                    <tr><th scope="row"><a href="#tournoi-1">Championnat de Paris 2023</a></th><td>Paris, Salle Pleyel</td><td>12/05/2023 au 13/05/2023</td></tr>
+<tr><th scope="row"><a href="#tournoi-2">Open Ete PokeDex TCG</a></th><td>Lyon, Centre de congres</td><td>22/07/2023 au 23/07/2023</td></tr>
+<tr><th scope="row"><a href="#tournoi-3">Grand Prix Automne</a></th><td>Bordeaux, Palais des Sports</td><td>07/10/2023 au 08/10/2023</td></tr>
+<tr><th scope="row"><a href="#tournoi-4">Tournoi de Noel</a></th><td>Paris, Espace Champerret</td><td>16/12/2023</td></tr>
+<tr><th scope="row"><a href="#tournoi-5">Championnat de France 2024</a></th><td>Marseille, Palais du Pharo</td><td>20/04/2024 au 21/04/2024</td></tr>
+<tr><th scope="row"><a href="#tournoi-6">Open Printemps 2024</a></th><td>Nantes, La Cite des Congres</td><td>09/03/2024 au 10/03/2024</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <section class="section">
+            <h2>Résultats des combats</h2>
+            <div id="filtre-tournois" class="filtre-tournois" hidden>
+                <label for="choix-tournoi">Afficher les combats d'un tournoi</label>
+                <select id="choix-tournoi"><option value="">Tous les tournois</option><option value="1">Championnat de Paris 2023</option><option value="2">Open Ete PokeDex TCG</option><option value="3">Grand Prix Automne</option><option value="4">Tournoi de Noel</option><option value="5">Championnat de France 2024</option><option value="6">Open Printemps 2024</option></select>
+            </div>
+            <article id="tournoi-1" class="panneau matchs" data-tournoi="1">
+                <h3>Championnat de Paris 2023</h3>
+                <ul><li><strong>AshKetchum - BrockRock</strong><br>12/05/2023 à 10:00 · AshKetchum</li>
+<li><strong>MistyWater - GaryOak</strong><br>12/05/2023 à 11:00 · GaryOak</li>
+<li><strong>TrainerRed - SaraFlame</strong><br>12/05/2023 à 12:00 · TrainerRed</li>
+<li><strong>LucasStorm - AshKetchum</strong><br>12/05/2023 à 14:00 · AshKetchum</li>
+<li><strong>GaryOak - TrainerRed</strong><br>12/05/2023 à 15:00 · GaryOak</li>
+<li><strong>AshKetchum - GaryOak</strong><br>13/05/2023 à 10:00 · GaryOak</li>
+<li><strong>TrainerRed - GaryOak</strong><br>13/05/2023 à 14:00 · TrainerRed</li></ul>
+            </article>
+            <article id="tournoi-2" class="panneau matchs" data-tournoi="2">
+                <h3>Open Ete PokeDex TCG</h3>
+                <ul><li><strong>TrainerRed - AshKetchum</strong><br>22/07/2023 à 10:00 · TrainerRed</li>
+<li><strong>GaryOak - MaxSpeed</strong><br>22/07/2023 à 11:00 · Match nul</li>
+<li><strong>PokeMaster99 - LilyLeaf</strong><br>22/07/2023 à 14:00 · LilyLeaf</li>
+<li><strong>TrainerRed - GaryOak</strong><br>23/07/2023 à 10:00 · TrainerRed</li></ul>
+            </article>
+            <article id="tournoi-3" class="panneau matchs" data-tournoi="3">
+                <h3>Grand Prix Automne</h3>
+                <ul><li><strong>MistyWater - TrainerRed</strong><br>07/10/2023 à 10:00 · TrainerRed</li>
+<li><strong>SaraFlame - BrockRock</strong><br>07/10/2023 à 11:00 · SaraFlame</li>
+<li><strong>MaxSpeed - LucasStorm</strong><br>07/10/2023 à 14:00 · MaxSpeed</li>
+<li><strong>SaraFlame - TrainerRed</strong><br>08/10/2023 à 10:00 · TrainerRed</li></ul>
+            </article>
+            <article id="tournoi-4" class="panneau matchs" data-tournoi="4">
+                <h3>Tournoi de Noel</h3>
+                <ul><li><strong>AshKetchum - PokeMaster99</strong><br>16/12/2023 à 10:00 · AshKetchum</li>
+<li><strong>GaryOak - MistyWater</strong><br>16/12/2023 à 11:00 · MistyWater</li>
+<li><strong>AshKetchum - LilyLeaf</strong><br>16/12/2023 à 14:00 · AshKetchum</li></ul>
+            </article>
+            <article id="tournoi-5" class="panneau matchs" data-tournoi="5">
+                <h3>Championnat de France 2024</h3>
+                <ul><li><strong>TrainerRed - LucasStorm</strong><br>20/04/2024 à 10:00 · TrainerRed</li>
+<li><strong>AshKetchum - GaryOak</strong><br>20/04/2024 à 11:00 · GaryOak</li>
+<li><strong>TrainerRed - GaryOak</strong><br>21/04/2024 à 10:00 · TrainerRed</li></ul>
+            </article>
+            <article id="tournoi-6" class="panneau matchs" data-tournoi="6">
+                <h3>Open Printemps 2024</h3>
+                <ul><li><strong>MistyWater - PokeMaster99</strong><br>09/03/2024 à 10:00 · MistyWater</li>
+<li><strong>BrockRock - LilyLeaf</strong><br>09/03/2024 à 11:00 · Match nul</li>
+<li><strong>MistyWater - BrockRock</strong><br>10/03/2024 à 10:00 · MistyWater</li></ul>
+            </article>
+        </section>
+        <section class="section panneau">
+            <h2>Préparer un premier tournoi</h2>
+            <ul>
+                <li>Vérifie le format annoncé par l'organisateur pour savoir quelles cartes sont autorisées.</li>
+                <li>Compte les cartes de ton deck et prépare ta liste si l'organisateur la demande.</li>
+                <li>Prévois de quoi marquer les dégâts et entraîne-toi à expliquer tes actions pendant un match.</li>
+            </ul>
+        </section>
+        <section class="section panneau">
+            <h2>Atelier deck</h2>
+            <p>Teste la répartition de ton deck entre cartes Pokémon, Dresseur et Énergie. Essaie par exemple 16 Pokémon, 30 Dresseurs et 14 Énergies.</p>
+            <form id="atelier-deck" hidden>
+                <div class="grille">
+                    <label>Pokémon <input type="number" name="pokemon" min="0" max="60" value="0" required></label>
+                    <label>Dresseurs <input type="number" name="dresseurs" min="0" max="60" value="0" required></label>
+                    <label>Énergies <input type="number" name="energies" min="0" max="60" value="0" required></label>
+                </div>
+                <button type="submit">Vérifier le total</button>
+                <p id="resultat-deck" role="status"></p>
+            </form>
+            <p>L'atelier vérifie le nombre de cartes. Pour vérifier un deck précis, il faut aussi connaître le format du tournoi et les cartes autorisées.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="conteneur barre">
+            <p>PokéDex TCG · Projet web EFREI</p>
+            <nav aria-label="Navigation de pied de page">
+                <a href="index.html">Accueil</a>
+                <a href="cartes.html">Cartes</a>
+                <a href="tournois.html" aria-current="page">Tournois</a>
+                <a href="apropos.html">À propos</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

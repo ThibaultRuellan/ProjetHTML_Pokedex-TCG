@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accueil | PokéDex TCG</title>
+    <link rel="icon" href="img/pokeball.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/quiz.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="conteneur barre">
+            <a class="logo" href="index.html"><img src="img/pokeball.png" width="32" height="32" alt="">PokéDex TCG</a>
+            <nav aria-label="Navigation principale">
+                <a href="index.html" aria-current="page">Accueil</a>
+                <a href="cartes.html">Cartes</a>
+                <a href="tournois.html">Tournois</a>
+                <a href="apropos.html">À propos</a>
+            </nav>
+        </div>
+    </header>
+    <main class="conteneur">
+        <section class="hero">
+            <div>
+                <h1>PokéDex TCG</h1>
+                <p>Tu veux apprendre à lire une carte Pokémon ou retrouver tes Pokémon préférés ? Découvre les bases du jeu et compose ta collection.</p>
+                <a class="bouton" href="cartes.html">Voir le catalogue</a>
+            </div>
+            <img src="img/pokemon/25.webp" width="256" height="256" alt="Pikachu">
+        </section>
+        <section class="section">
+            <h2>Cartes et tournois</h2>
+            <div class="grille accueil">
+                <article class="panneau">
+                    <h3>Le catalogue</h3>
+                    <p>Recherche une carte par son nom, filtre par type et ajoute tes préférées à ta collection.</p>
+                    <a href="cartes.html">Parcourir les cartes</a>
+                </article>
+                <article class="panneau">
+                    <h3>Les tournois</h3>
+                    <p>Choisis un tournoi pour voir qui a joué et retrouver les résultats des matchs.</p>
+                    <a href="tournois.html">Voir les tournois</a>
+                </article>
+            </div>
+        </section>
+        <section class="section panneau accueil-paldea">
+            <div>
+                <h2>Comment préparer une attaque ?</h2>
+                <p>Avec une Faiblo Ball, tu peux chercher Chochodile dans ton deck et le placer sur ton Banc. Une fois Chochodile en position de Pokémon Actif, son attaque à 50 dégâts demande deux Énergies Feu et une troisième Énergie de n'importe quel type.</p>
+                <a href="cartes.html#dresseurs-energies">Voir la Faiblo Ball et les Énergies</a>
+            </div>
+            <img src="img/pokemon/909.webp" width="256" height="256" alt="Chochodile">
+        </section>
+        <section class="section">
+            <h2>Comment se joue une partie ?</h2>
+            <p>TCG veut dire <em>Trading Card Game</em>. Dans une partie classique du jeu de cartes Pokémon, deux joueurs s'affrontent avec un deck de 60 cartes chacun.</p>
+            <div class="grille">
+                <article class="panneau">
+                    <h3>Les cartes Pokémon</h3>
+                    <p>Ton Pokémon Actif combat. Sur le Banc, tu peux garder jusqu'à cinq autres Pokémon pour préparer la suite de la partie.</p>
+                </article>
+                <article class="panneau">
+                    <h3>Les cartes Énergie</h3>
+                    <p>Tu attaches des Énergies à tes Pokémon pour utiliser leurs attaques. Les symboles à côté d'une attaque indiquent son coût.</p>
+                </article>
+                <article class="panneau">
+                    <h3>Les cartes Dresseur</h3>
+                    <p>Leur effet dépend de la carte. Certaines te font piocher, d'autres t'aident à chercher un Pokémon ou une Énergie dans ton deck.</p>
+                </article>
+            </div>
+            <p class="suite">Au début de la partie, tu mets de côté six cartes Récompense. Tu peux gagner en les récupérant toutes au fil des K.O. Un Pokémon particulier peut rapporter plusieurs Récompenses.</p>
+        </section>
+
+        <section class="section" id="quiz">
+            <h2>Mini-quiz Pokémon</h2>
+            <form id="quiz-pokemon" class="panneau" hidden>
+                <fieldset>
+                    <legend>1. Combien de cartes contient un deck classique ?</legend>
+                    <label><input type="radio" name="q1" value="40" required> 40 cartes</label>
+                    <label><input type="radio" name="q1" value="60"> 60 cartes</label>
+                    <label><input type="radio" name="q1" value="100"> 100 cartes</label>
+                </fieldset>
+                <fieldset>
+                    <legend>2. Quelles cartes permettent de payer le coût d'une attaque ?</legend>
+                    <label><input type="radio" name="q2" value="energie" required> Les cartes Énergie</label>
+                    <label><input type="radio" name="q2" value="dresseur"> Les cartes Dresseur</label>
+                    <label><input type="radio" name="q2" value="recompense"> Les cartes Récompense</label>
+                </fieldset>
+                <fieldset>
+                    <legend>3. Combien de Pokémon peut-on avoir sur le Banc ?</legend>
+                    <label><input type="radio" name="q3" value="3" required> Jusqu'à trois</label>
+                    <label><input type="radio" name="q3" value="5"> Jusqu'à cinq</label>
+                    <label><input type="radio" name="q3" value="7"> Jusqu'à sept</label>
+                </fieldset>
+                <button type="submit">Voir mon score</button>
+                <p id="score-quiz" role="status"></p>
+                <p id="correction-quiz" hidden>Les réponses étaient 60 cartes, les cartes Énergie et jusqu'à cinq Pokémon sur le Banc.</p>
+            </form>
+            <noscript><p>Active JavaScript pour répondre au quiz.</p></noscript>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="conteneur barre">
+            <p>PokéDex TCG · Projet web EFREI</p>
+            <nav aria-label="Navigation de pied de page">
+                <a href="index.html" aria-current="page">Accueil</a>
+                <a href="cartes.html">Cartes</a>
+                <a href="tournois.html">Tournois</a>
+                <a href="apropos.html">À propos</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
